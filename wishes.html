@@ -136,8 +136,8 @@
             const currentDate = new Date();
             const ageInMilliseconds = currentDate - birthDate;
 
-            const years = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25));
-            const days = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
+            const years = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24 * 365));
+            const days = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
             const hours = Math.floor((ageInMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((ageInMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((ageInMilliseconds % (1000 * 60)) / 1000);
