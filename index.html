@@ -132,11 +132,11 @@
     <script>
         // Calculate age based on date of birth (16th April 2001) and EST timezone (UTC - 5)
         function calculateAge() {
-            const birthDate = new Date('2001-04-16T00:00:00-05:00'); // Use UTC - 5 for EST
+            const birthDate = new Date('2001-04-16T00:00:00Z'); // Birthdate in UTC
             const currentDate = new Date();
-            
-            // Adjust for the current date in UTC - 5 timezone
-            const offset = -5 * 60; // EST is UTC - 5 hours, in minutes
+
+            // Adjust for the EST timezone (UTC - 5 hours)
+            const offset = -5 * 60; // 5 hours offset in minutes
             currentDate.setMinutes(currentDate.getMinutes() + currentDate.getTimezoneOffset() + offset);
 
             const ageInMilliseconds = currentDate - birthDate;
