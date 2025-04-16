@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 25th Birthday!</title>
+    <title>Happy 24th Birthday!</title>
     <style>
         /* General styling */
         body, html {
@@ -124,7 +124,7 @@
 
     <!-- Popup Message -->
     <div class="popup" id="popup">
-        <h2>Welcome to Your 24th Year! 🎉</h2>
+        <h2>Welcome to Your 25th Year! 🎉</h2>
         <p>Here's to the best year of your life, filled with joy, love, and countless adventures!</p>
         <button class="close-btn" onclick="closePopup()">Close</button>
     </div>
@@ -146,7 +146,9 @@
         }
 
         // Display the age
-        document.getElementById('age').innerText = `You are ${calculateAge()} old!`;
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('age').innerText = `You are ${calculateAge()} old!`;
+        });
 
         // Countdown timer
         let countdownValue = 10;
